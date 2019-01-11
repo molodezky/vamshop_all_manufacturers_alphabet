@@ -24,7 +24,7 @@
 	$ms = array();
 	while($row = vam_db_fetch_array($r)){
 		$nm=trim($row['name']);
-
+		$nm = ucfirst($nm);
 		//$lett=preg_replace('@^(.).*@', '\1', $nm);
 		$ms[mb_substr($nm,0,1)][]=$row;
 
