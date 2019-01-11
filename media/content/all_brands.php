@@ -16,6 +16,7 @@
 ?>
 
 <?php
+mb_internal_encoding("UTF-8");
 
 	$q = "select distinct m.manufacturers_id id, m.manufacturers_name name from  " . TABLE_MANUFACTURERS . " m,  " . TABLE_PRODUCTS . " p WHERE m.manufacturers_id=p.manufacturers_id AND p.products_status ORDER BY m.manufacturers_name" ;
 
